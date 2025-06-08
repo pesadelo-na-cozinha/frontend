@@ -1,18 +1,8 @@
 <script setup lang="ts">
-    const mesas = [
-        {
-            name: "Mesa 1", status: 3
-        },
-        {
-            name: "Mesa 2", status: 2
-        },
-        {
-            name: "Mesa 3", status: 1
-        },
-        {
-            name: "Mesa 4", status: 0
-        }
-    ]
+    const mesas: {
+        name: string,
+        status: number
+    }[] = await $fetch("http://localhost:3001/mesas")
 </script>
 
 <template>
